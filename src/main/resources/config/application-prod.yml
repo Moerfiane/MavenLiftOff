@@ -45,8 +45,11 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   jpa:
+    database: MYSQL
     show-sql: false
     properties:
+      hibernate.ddl-auto: update
+      hiberbate.dialect: org.hibernate.dialect.MySQL8Dialect
       hibernate.id.new_generator_mappings: true
       hibernate.connection.provider_disables_autocommit: true
       hibernate.cache.use_second_level_cache: false
